@@ -15,4 +15,15 @@ describe Stock , :vcr do
     end
   end
   
+  context "#indexes_positive?", :vcr do
+    it "should return false if the indexes are not positive" do
+      stock = FactoryGirl.create(:stock)
+      stock.indexes_positive?.should == false
+    end
+
+    it "should return true if the indexes are positive" do
+      stock = FactoryGirl.create(:stock)
+      stock.indexes_positive?.should == true
+    end
+  end
 end

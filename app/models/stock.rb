@@ -14,4 +14,11 @@ class Stock < ActiveRecord::Base
   def distance_from_52_week_high
     last_trade.percent_of(year_high)
   end
+
+  def indexes_positive?
+    #Checks S&P 500 and NASDAQ, does not check DJI because I was having difficulty with the api
+    gspc = (MarketBeat.days_value_change_real_time :"%5EGSPC")[1].gsub("%", "").to_f
+    ixic = (MarketBeat.days_value_change_real_time :"%5EIXIC")[1].gsub("%", "").to_f
+    gspc > 0 && ixic > 0
+  end
 end
