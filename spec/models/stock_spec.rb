@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Stock , :vcr do
-  context "#52_week_high" do
+  context "#year_high" do
     it "should show 52 week high" do
       stock = FactoryGirl.create(:stock)
       stock.year_high.should == "705.07"
@@ -24,6 +24,13 @@ describe Stock , :vcr do
     it "should return true if the indexes are positive" do
       stock = FactoryGirl.create(:stock)
       stock.indexes_positive?.should == true
+    end
+  end
+
+  context "#distance_from_todays_high", :vcr do
+    it "should return a float representing the % away from today's high" do
+      stock = FactoryGirl.create(:stock)
+      stock.distance_from_todays_high.should == 99.38345687727967
     end
   end
 

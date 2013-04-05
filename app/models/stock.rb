@@ -7,12 +7,20 @@ class Stock < ActiveRecord::Base
     MarketBeat.high_52_week symbol
   end
 
+  def todays_high
+    MarketBeat.days_high symbol
+  end
+
   def last_trade
     (MarketBeat.last_trade_real_time symbol).to_f
   end
 
   def distance_from_52_week_high
     last_trade.percent_of(year_high)
+  end
+
+  def distance_from_todays_high
+    last_trade.percent_of(todays_high)
   end
 
   def indexes_positive?
@@ -28,5 +36,6 @@ class Stock < ActiveRecord::Base
     stop = DateTime.now.in_time_zone("EST").beginning_of_day + 15.hours + 30.minutes #3:30 pm est
     (start..stop).cover?(now)
   end
+
 
 end

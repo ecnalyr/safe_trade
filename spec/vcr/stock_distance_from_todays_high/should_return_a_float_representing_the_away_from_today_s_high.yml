@@ -1,0 +1,175 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://download.finance.yahoo.com/d/quotes.csv?s=aapl&f=m2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Fri, 05 Apr 2013 19:07:21 GMT
+      p3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      cache-control:
+      - private, no-cache, no-store
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+      content-type:
+      - application/octet-stream
+    body:
+      encoding: US-ASCII
+      string: ! "\"N/A - N/A\"\r\n"
+    http_version: '1.1'
+  recorded_at: Fri, 05 Apr 2013 19:07:21 GMT
+- request:
+    method: get
+    uri: http://www.google.com/ig/api?stock=aapl
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      x-frame-options:
+      - SAMEORIGIN
+      content-type:
+      - text/xml; charset=ISO-8859-1
+      date:
+      - Fri, 05 Apr 2013 19:08:37 GMT
+      pragma:
+      - no-cache
+      expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      cache-control:
+      - no-cache, no-store, must-revalidate
+      set-cookie:
+      - PREF=ID=34def1aee5527f14:TM=1365188917:LM=1365188917:S=Iad-ZBSixk4TPfaQ; expires=Sun,
+        05-Apr-2015 19:08:37 GMT; path=/; domain=.google.com
+      x-content-type-options:
+      - nosniff
+      server:
+      - igfe
+      x-xss-protection:
+      - 1; mode=block
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0"?><xml_api_reply version="1"><finance module_id="0"
+        tab_id="0" mobile_row="0" mobile_zipped="1" row="0" section="0" ><symbol data="AAPL"/><pretty_symbol
+        data="AAPL"/><symbol_lookup_url data="/finance?client=ig&amp;q=AAPL"/><company
+        data="Apple Inc."/><exchange data="Nasdaq"/><exchange_timezone data="ET"/><exchange_utc_offset
+        data="+05:00"/><exchange_closing data="960"/><divisor data="2"/><currency
+        data="USD"/><last data="422.36"/><high data="424.95"/><low data="421.35"/><volume
+        data="9566934"/><avg_volume data="15929"/><market_cap data="396620.52"/><open
+        data="424.50"/><y_close data="427.72"/><change data="-5.36"/><perc_change
+        data="-1.25"/><delay data="0"/><trade_timestamp data="14 seconds ago"/><trade_date_utc
+        data="20130405"/><trade_time_utc data="190823"/><current_date_utc data="20130405"/><current_time_utc
+        data="190837"/><symbol_url data="/finance?client=ig&amp;q=AAPL"/><chart_url
+        data="/finance/chart?q=NASDAQ:AAPL&amp;tlf=12"/><disclaimer_url data="/help/stock_disclaimer.html"/><ecn_url
+        data=""/><isld_last data=""/><isld_trade_date_utc data=""/><isld_trade_time_utc
+        data=""/><brut_last data=""/><brut_trade_date_utc data=""/><brut_trade_time_utc
+        data=""/><daylight_savings data="true"/></finance></xml_api_reply>
+    http_version: '1.1'
+  recorded_at: Fri, 05 Apr 2013 19:08:37 GMT
+- request:
+    method: get
+    uri: http://finance.google.com/finance/info?client=ig&q=aapl
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - text/html; charset=ISO-8859-1
+      set-cookie:
+      - SC=RV=:ED=us; expires=Sun, 17-Jan-2038 19:14:07 GMT; path=/finance; domain=.google.com
+      - PREF=ID=ffceb8679e2f9b9d:TM=1365188917:LM=1365188917:S=8hQmE71xX70BOg42; expires=Sun,
+        05-Apr-2015 19:08:37 GMT; path=/; domain=.google.com
+      date:
+      - Fri, 05 Apr 2013 19:08:37 GMT
+      pragma:
+      - no-cache
+      expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      cache-control:
+      - no-cache, no-store, must-revalidate, proxy-revalidate
+      x-ua-compatible:
+      - IE=EmulateIE7
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      server:
+      - GSE
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! '
+
+        // [
+
+        {
+
+        "id": "22144"
+
+        ,"t" : "AAPL"
+
+        ,"e" : "NASDAQ"
+
+        ,"l" : "422.33"
+
+        ,"l_cur" : "422.33"
+
+        ,"s": "0"
+
+        ,"ltt":"3:08PM EDT"
+
+        ,"lt" : "Apr 5, 3:08PM EDT"
+
+        ,"c" : "-5.39"
+
+        ,"cp" : "-1.26"
+
+        ,"ccol" : "chr"
+
+        }
+
+        ]
+
+'
+    http_version: '1.1'
+  recorded_at: Fri, 05 Apr 2013 19:08:37 GMT
+recorded_with: VCR 2.4.0
