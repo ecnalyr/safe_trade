@@ -21,4 +21,12 @@ class Stock < ActiveRecord::Base
     ixic = (MarketBeat.days_value_change_real_time :"%5EIXIC")[1].gsub("%", "").to_f
     gspc > 0 && ixic > 0
   end
+
+  def between_thirty_min_away_from_open_and_close?
+    now = Time.now.in_time_zone("EST")
+    start = DateTime.now.in_time_zone("EST").beginning_of_day + 10.hours #10:00 am est
+    stop = DateTime.now.in_time_zone("EST").beginning_of_day + 15.hours + 30.minutes #3:30 pm est
+    (start..stop).cover?(now)
+  end
+
 end

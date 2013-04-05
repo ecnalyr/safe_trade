@@ -32,4 +32,5 @@ gem "market_beat", :git => 'git://github.com/ecnalyr/market_beat'
 group :test do
   gem 'vcr'
   gem 'fakeweb'
+  gem 'timecop'
 end

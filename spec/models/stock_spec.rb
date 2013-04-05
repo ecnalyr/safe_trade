@@ -26,4 +26,24 @@ describe Stock , :vcr do
       stock.indexes_positive?.should == true
     end
   end
+
+  context "#between_thirty_min_away_from_open_and_close?" do
+    it "should return true if it is noon EST time" do
+      stock = FactoryGirl.create(:stock)
+      Timecop.freeze(Time.utc(2013, 4, 5, 17))
+      stock.between_thirty_min_away_from_open_and_close?.should == true
+    end
+
+    it "should return false if it is 08:31 EST time" do
+      Timecop.freeze(Time.utc(2013, 4, 5, 14, 31))
+      stock = FactoryGirl.create(:stock)
+      stock.between_thirty_min_away_from_open_and_close?.should == false
+    end
+
+    it "should return false if it is 07:00 EST time" do
+      Timecop.freeze(Time.utc(2013, 4, 5, 13))
+      stock = FactoryGirl.create(:stock)
+      stock.between_thirty_min_away_from_open_and_close?.should == false
+    end
+  end
 end
