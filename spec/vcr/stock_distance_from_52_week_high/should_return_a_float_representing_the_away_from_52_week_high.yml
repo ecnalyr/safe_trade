@@ -1,0 +1,315 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://finance.google.com/finance/info?client=ig&q=0.0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      content-type:
+      - text/html; charset=ISO-8859-1
+      set-cookie:
+      - PREF=ID=8559d8c50fb2c33b:TM=1365180941:LM=1365180941:S=6rFeiI3M0ySPwh37; expires=Sun,
+        05-Apr-2015 16:55:41 GMT; path=/; domain=.google.com
+      x-content-type-options:
+      - nosniff
+      transfer-encoding:
+      - chunked
+      date:
+      - Fri, 05 Apr 2013 16:55:41 GMT
+      expires:
+      - Fri, 05 Apr 2013 16:55:41 GMT
+      cache-control:
+      - private, max-age=0
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      server:
+      - GSE
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Fri, 05 Apr 2013 16:55:45 GMT
+- request:
+    method: get
+    uri: http://finance.google.com/finance/info?client=ig&q=0.0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      content-type:
+      - text/html; charset=ISO-8859-1
+      set-cookie:
+      - PREF=ID=352d22f9409350dc:TM=1365180941:LM=1365180941:S=eiU4nOzfpd7nuum4; expires=Sun,
+        05-Apr-2015 16:55:41 GMT; path=/; domain=.google.com
+      x-content-type-options:
+      - nosniff
+      transfer-encoding:
+      - chunked
+      date:
+      - Fri, 05 Apr 2013 16:55:41 GMT
+      expires:
+      - Fri, 05 Apr 2013 16:55:41 GMT
+      cache-control:
+      - private, max-age=0
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      server:
+      - GSE
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Fri, 05 Apr 2013 16:55:45 GMT
+- request:
+    method: get
+    uri: http://download.finance.yahoo.com/d/quotes.csv?s=aapl&f=k
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Fri, 05 Apr 2013 16:55:41 GMT
+      p3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      cache-control:
+      - private, no-cache, no-store
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+      content-type:
+      - application/octet-stream
+    body:
+      encoding: US-ASCII
+      string: ! "705.07\r\n"
+    http_version: '1.1'
+  recorded_at: Fri, 05 Apr 2013 16:55:46 GMT
+- request:
+    method: get
+    uri: http://finance.google.com/finance/info?client=ig&q=aapl
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - text/html; charset=ISO-8859-1
+      set-cookie:
+      - SC=RV=:ED=us; expires=Sun, 17-Jan-2038 19:14:07 GMT; path=/finance; domain=.google.com
+      - PREF=ID=7c0288454d66ab43:TM=1365180967:LM=1365180967:S=0xaiRzDLC3LnG-uD; expires=Sun,
+        05-Apr-2015 16:56:07 GMT; path=/; domain=.google.com
+      date:
+      - Fri, 05 Apr 2013 16:56:07 GMT
+      pragma:
+      - no-cache
+      expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      cache-control:
+      - no-cache, no-store, must-revalidate, proxy-revalidate
+      x-ua-compatible:
+      - IE=EmulateIE7
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      server:
+      - GSE
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! '
+
+        // [
+
+        {
+
+        "id": "22144"
+
+        ,"t" : "AAPL"
+
+        ,"e" : "NASDAQ"
+
+        ,"l" : "422.48"
+
+        ,"l_cur" : "422.48"
+
+        ,"s": "0"
+
+        ,"ltt":"12:56PM EDT"
+
+        ,"lt" : "Apr 5, 12:56PM EDT"
+
+        ,"c" : "-5.24"
+
+        ,"cp" : "-1.22"
+
+        ,"ccol" : "chr"
+
+        }
+
+        ]
+
+'
+    http_version: '1.1'
+  recorded_at: Fri, 05 Apr 2013 16:56:12 GMT
+- request:
+    method: get
+    uri: http://finance.google.com/finance/info?client=ig&q=aapl
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - text/html; charset=ISO-8859-1
+      set-cookie:
+      - SC=RV=:ED=us; expires=Sun, 17-Jan-2038 19:14:07 GMT; path=/finance; domain=.google.com
+      - PREF=ID=2f36f6b45e7cd5c1:TM=1365180968:LM=1365180970:S=AM6kM66CSyrMYeYF; expires=Sun,
+        05-Apr-2015 16:56:10 GMT; path=/; domain=.google.com
+      date:
+      - Fri, 05 Apr 2013 16:56:10 GMT
+      pragma:
+      - no-cache
+      expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      cache-control:
+      - no-cache, no-store, must-revalidate, proxy-revalidate
+      x-ua-compatible:
+      - IE=EmulateIE7
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      server:
+      - GSE
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! '
+
+        // [
+
+        {
+
+        "id": "22144"
+
+        ,"t" : "AAPL"
+
+        ,"e" : "NASDAQ"
+
+        ,"l" : "422.43"
+
+        ,"l_cur" : "422.43"
+
+        ,"s": "0"
+
+        ,"ltt":"12:56PM EDT"
+
+        ,"lt" : "Apr 5, 12:56PM EDT"
+
+        ,"c" : "-5.29"
+
+        ,"cp" : "-1.24"
+
+        ,"ccol" : "chr"
+
+        }
+
+        ]
+
+'
+    http_version: '1.1'
+  recorded_at: Fri, 05 Apr 2013 16:56:15 GMT
+- request:
+    method: get
+    uri: http://download.finance.yahoo.com/d/quotes.csv?s=aapl&f=k
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Fri, 05 Apr 2013 16:56:11 GMT
+      p3p:
+      - policyref="http://info.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV
+        TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY
+        ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      cache-control:
+      - private, no-cache, no-store
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+      content-type:
+      - application/octet-stream
+    body:
+      encoding: US-ASCII
+      string: ! "705.07\r\n"
+    http_version: '1.1'
+  recorded_at: Fri, 05 Apr 2013 16:56:15 GMT
+recorded_with: VCR 2.4.0
